@@ -1,5 +1,5 @@
 /* Deadbolt service worker: network-first (revalidate), cache fallback, same-origin only */
-const CACHE = 'deadbolt-5.0-7b02272c9f';
+const CACHE = 'deadbolt-5.0.1-9d7f7a408c';
 const FILES = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
